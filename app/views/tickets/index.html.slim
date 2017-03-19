@@ -1,24 +1,49 @@
-h3 Tickets
+.column.row
+  h3 Tickets
+  
+  .callout.primary
+    | Create ticket in Zendesk
 
-= form_for @view.create_ticket_form, url: tickets_path, method: :post do |f|
-  - if @view.create_ticket_form.errors.any?
-      .callout.alert
-        ul
-          - @view.create_ticket_form.errors.full_messages.each do |msg|
-            li= msg
+  .row
+    = form_for @view.create_ticket_form, url: tickets_path, method: :post do |f|
+      - if @view.create_ticket_form.errors.any?
+          .callout.alert
+            ul
+              - @view.create_ticket_form.errors.full_messages.each do |msg|
+                li= msg
 
-  = f.text_field :title
-  = f.text_field :description
-  = f.submit
+      .small-6.columns
+        .row
+          .small-3.columns
+            = f.label :title, class: 'middle'
+          .small-9.columns
+            = f.text_field :title
 
-hr
+        .row
+          .small-3.columns
+            = f.label :description, class: ' middle'
+          .small-9.columns
+            = f.text_area :description
 
-- @view.tickets.each do |ticket|
-  = ticket.title
-  br
-  = ticket.description
-  br
-  = ticket.status
-  br
-  = ticket.created_at
+        .row
+          .small-12.columns
+            = f.submit 'Create ticket', class: 'button large expanded'
+      .small-8.columns
+
   hr
+
+  .row
+    .small-12.columns
+        table.stack
+          thead
+            th Title
+            th width=400 Description
+            th Status
+            th Created at
+          tbody
+            - @view.tickets.each do |ticket|
+              tr
+                td = ticket.title
+                td = ticket.description
+                td = ticket.status
+                td = ticket.created_at

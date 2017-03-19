@@ -11,6 +11,8 @@ gem 'attributed_object'
 
 # frontend
 gem 'slim-rails'
+gem 'sass-rails'
+gem 'jquery-rails'
 gem 'foundation-rails'
 
 group :development, :test do
