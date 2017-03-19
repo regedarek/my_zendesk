@@ -8,9 +8,7 @@ module Tickets
     end
 
     def fetch_data!
-      Rails.cache.fetch('fetched_tickets', unless_exist: true) do
-        ZendeskTicketsFetchJob.perform_later
-      end
+      ZendeskTicketsFetchJob.perform_later
       @tickets = Db::Ticket.order(recorded_at: :desc)
     end
   end
