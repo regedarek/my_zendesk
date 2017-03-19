@@ -5,6 +5,10 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'jbuilder', '~> 2.5'
 
+# frontend
+gem 'slim-rails'
+gem 'foundation-rails'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
