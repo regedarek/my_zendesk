@@ -4,31 +4,32 @@
   .callout.primary
     | Create ticket in Zendesk
 
-  .row
-    = form_for @view.create_ticket_form, url: tickets_path, method: :post do |f|
-      - if @view.create_ticket_form.errors.any?
-          .callout.alert
-            ul
-              - @view.create_ticket_form.errors.full_messages.each do |msg|
-                li= msg
-
-      .small-6.columns
-        .row
-          .small-3.columns
-            = f.label :title, class: 'middle'
-          .small-9.columns
-            = f.text_field :title
-
-        .row
-          .small-3.columns
-            = f.label :description, class: ' middle'
-          .small-9.columns
-            = f.text_area :description
-
+  = form_for @view.create_ticket_form, url: tickets_path, method: :post do |f|
+    - if @view.create_ticket_form.errors.any?
         .row
           .small-12.columns
-            = f.submit 'Create ticket', class: 'button large expanded'
-      .small-8.columns
+            .callout.alert
+              ul
+                - @view.create_ticket_form.errors.full_messages.each do |msg|
+                  li= msg
+
+    .small-6.columns
+      .row
+        .small-3.columns
+          = f.label :title, class: 'middle'
+        .small-9.columns
+          = f.text_field :title
+
+      .row
+        .small-3.columns
+          = f.label :description, class: ' middle'
+        .small-9.columns
+          = f.text_area :description
+
+      .row
+        .small-12.columns
+          = f.submit 'Create ticket', class: 'button large expanded'
+    .small-8.columns
 
   hr
 
@@ -46,4 +47,4 @@
                 td = ticket.title
                 td = ticket.description
                 td = ticket.status
-                td = ticket.created_at
+                td = ticket.recorded_at
