@@ -1,4 +1,24 @@
 h3 Tickets
 
-- @view.entries.each do |ticket|
-  = ticket
+= form_for @view.create_ticket_form, url: tickets_path, method: :post do |f|
+  - if @view.create_ticket_form.errors.any?
+      .callout.alert
+        ul
+          - @view.create_ticket_form.errors.full_messages.each do |msg|
+            li= msg
+
+  = f.text_field :title
+  = f.text_field :description
+  = f.submit
+
+hr
+
+- @view.tickets.each do |ticket|
+  = ticket.title
+  br
+  = ticket.description
+  br
+  = ticket.status
+  br
+  = ticket.created_at
+  hr

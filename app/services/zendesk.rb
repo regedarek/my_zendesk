@@ -10,6 +10,7 @@ class Zendesk
 
         require 'logger'
         config.logger = Logger.new(STDOUT)
+        config.cache = Rails.cache
       end
     end
   end
