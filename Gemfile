@@ -5,6 +5,10 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'jbuilder', '~> 2.5'
 
+# backend
+gem 'zendesk_api'
+gem 'attributed_object'
+
 # frontend
 gem 'slim-rails'
 gem 'foundation-rails'
