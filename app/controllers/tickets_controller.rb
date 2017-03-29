@@ -10,8 +10,10 @@ class TicketsController < ApplicationController
 
     result = Tickets::CreateTicket.create(form: @view.create_ticket_form)
     result.on!(
-      form_invalid: proc { |**| render :index },
-      success:      proc { |**| redirect_to(tickets_path, notice: 'Ticket created.') }
+      form_invalid: proc { |form:| render :index },
+      already_exist: proc { redirect_to(tickets_path, alert: 'Ticket already exists.') },
+      bad_data: proc { redirect_to(tickets_path, alert: 'Fetched wrong data from Zendesk API.') },
+      success:      proc { redirect_to(tickets_path, notice: 'Ticket created.') }
     )
   end
 
