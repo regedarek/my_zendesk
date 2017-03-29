@@ -17,6 +17,8 @@ gem 'foundation-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'webmock'
+  gem 'vcr'
   gem 'rspec-rails', '~> 3.5'
 end
 

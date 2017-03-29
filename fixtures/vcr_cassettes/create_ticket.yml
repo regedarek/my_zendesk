@@ -1,0 +1,146 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rockcodehelp.zendesk.com/api/v2/search?query=type:ticket%20updated%3E24hours
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - ZendeskAPI Ruby 1.14.2
+      Authorization:
+      - Basic ZGFyaXVzei5maW5zdGVyQGdtYWlsLmNvbS90b2tlbjoyUGpORXVuc0pGN2R6S0s4SncyWEtmN25WTGIwc0ZTbTlmYXFPd0E2
+      If-None-Match:
+      - W/"81c7f675bb38ae01794625d4192289d7"
+  response:
+    status:
+      code: 304
+      message: Not Modified
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 29 Mar 2017 12:17:38 GMT
+      Connection:
+      - keep-alive
+      X-Zendesk-Api-Version:
+      - v2
+      X-Zendesk-Application-Version:
+      - v16.27
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit:
+      - '400'
+      X-Rate-Limit-Remaining:
+      - '399'
+      Strict-Transport-Security:
+      - max-age=31536000;
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"81c7f675bb38ae01794625d4192289d7"'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Zendesk-Origin-Server:
+      - app17.pod3.dub1.zdsys.com
+      X-Request-Id:
+      - 1545bbf5-7644-46a1-c618-a0369f4368c6
+      X-Runtime:
+      - '0.394103'
+      X-Rack-Cache:
+      - miss
+      X-Zendesk-Request-Id:
+      - cd4ae2afaf99ff619c3c
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 12:17:38 GMT
+- request:
+    method: post
+    uri: https://rockcodehelp.zendesk.com/api/v2/tickets
+    body:
+      encoding: UTF-8
+      string: '{"ticket":{"subject":"test1","description":"test description","type":"ticket"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - ZendeskAPI Ruby 1.14.2
+      Authorization:
+      - Basic ZGFyaXVzei5maW5zdGVyQGdtYWlsLmNvbS90b2tlbjoyUGpORXVuc0pGN2R6S0s4SncyWEtmN25WTGIwc0ZTbTlmYXFPd0E2
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 29 Mar 2017 12:17:40 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '2753'
+      Connection:
+      - keep-alive
+      X-Zendesk-Api-Version:
+      - v2
+      X-Zendesk-Application-Version:
+      - v16.27
+      X-Frame-Options:
+      - SAMEORIGIN
+      Location:
+      - https://rockcodehelp.zendesk.com/api/v2/tickets/45.json
+      X-Rate-Limit:
+      - '400'
+      X-Rate-Limit-Remaining:
+      - '398'
+      Strict-Transport-Security:
+      - max-age=31536000;
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"07a23cfcf907791022719993e713a034"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Zendesk-Origin-Server:
+      - app21.pod3.dub1.zdsys.com
+      X-Request-Id:
+      - 918f0b7c-4869-421f-c27d-bc305bf60b01
+      X-Runtime:
+      - '0.935077'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Zendesk-Request-Id:
+      - 3ce9c82294e5d4703d5a
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '{"ticket":{"url":"https://rockcodehelp.zendesk.com/api/v2/tickets/45.json","id":45,"external_id":null,"via":{"channel":"api","source":{"from":{},"to":{},"rel":null}},"created_at":"2017-03-29T12:17:40Z","updated_at":"2017-03-29T12:17:40Z","type":null,"subject":"test1","raw_subject":"test1","description":"test
+        description","priority":null,"status":"open","recipient":null,"requester_id":9759064585,"submitter_id":9759064585,"assignee_id":9759064585,"organization_id":8614052905,"group_id":27894445,"collaborator_ids":[],"forum_topic_id":null,"problem_id":null,"has_incidents":false,"is_public":true,"due_at":null,"tags":[],"custom_fields":[],"satisfaction_rating":null,"sharing_agreement_ids":[],"fields":[],"brand_id":2821265,"allow_channelback":false},"audit":{"id":144495555569,"ticket_id":45,"created_at":"2017-03-29T12:17:40Z","author_id":9759064585,"via":{"channel":"api","source":{"from":{},"to":{},"rel":null}},"metadata":{"system":{"client":"ZendeskAPI
+        Ruby 1.14.2","ip_address":"89.25.215.61","location":"Katowice, 83, Poland","latitude":50.258399999999995,"longitude":19.027500000000003},"custom":{}},"events":[{"id":144495555609,"type":"Comment","author_id":9759064585,"body":"test
+        description","html_body":"<div class=\"zd-comment\"><p dir=\"auto\">test description</p></div>","plain_body":"test
+        description","public":true,"attachments":[],"audit_id":144495555569},{"id":144495555969,"type":"Create","value":"test1","field_name":"subject"},{"id":144495556029,"type":"Create","value":"9759064585","field_name":"requester_id"},{"id":144495556109,"type":"Create","value":"open","field_name":"status"},{"id":144495556169,"type":"Create","value":null,"field_name":"priority"},{"id":144495556209,"type":"Create","value":"9759064585","field_name":"assignee_id"},{"id":144495556249,"type":"Create","value":"27894445","field_name":"group_id"},{"id":144495556289,"type":"Create","value":"8614052905","field_name":"organization_id"},{"id":144495556329,"type":"Notification","via":{"channel":"rule","source":{"to":{},"from":{"id":134109625,"title":"Notify
+        requester of received request"},"rel":"trigger"}},"subject":"[Request received]
+        {{ticket.title}}","body":"Your request ({{ticket.id}}) has been received and
+        is being reviewed by our support staff.\n\nTo add additional comments, reply
+        to this email.\n\n{{ticket.comments_formatted}}","recipients":[9759064585]},{"id":144495556449,"type":"Notification","via":{"channel":"rule","source":{"to":{},"from":{"id":134109745,"title":"Notify
+        all agents of received request"},"rel":"trigger"}},"subject":"[{{ticket.account}}]
+        {{ticket.title}}","body":"A ticket (#{{ticket.id}}) by {{ticket.requester.name}}
+        has been received. It is unassigned.\n\n{{ticket.comments_formatted}}","recipients":[9759064585]}]}}'
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 12:17:40 GMT
+recorded_with: VCR 3.0.3

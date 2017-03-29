@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rockcodehelp.zendesk.com/api/v2/search?query=type:ticket%20updated%3E24hours
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - ZendeskAPI Ruby 1.14.2
+      Authorization:
+      - Basic ZGFyaXVzei5maW5zdGVyQGdtYWlsLmNvbS90b2tlbjoyUGpORXVuc0pGN2R6S0s4SncyWEtmN25WTGIwc0ZTbTlmYXFPd0E2
+      If-None-Match:
+      - W/"81c7f675bb38ae01794625d4192289d7"
+  response:
+    status:
+      code: 304
+      message: Not Modified
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 29 Mar 2017 12:11:32 GMT
+      Connection:
+      - keep-alive
+      X-Zendesk-Api-Version:
+      - v2
+      X-Zendesk-Application-Version:
+      - v16.27
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit:
+      - '400'
+      X-Rate-Limit-Remaining:
+      - '399'
+      Strict-Transport-Security:
+      - max-age=31536000;
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"81c7f675bb38ae01794625d4192289d7"'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Zendesk-Origin-Server:
+      - app24.pod3.dub1.zdsys.com
+      X-Request-Id:
+      - 7d0d4da8-9cf7-48e8-c876-bc305bf61151
+      X-Runtime:
+      - '0.780639'
+      X-Rack-Cache:
+      - miss
+      X-Zendesk-Request-Id:
+      - e3c1c0ce138edb82bd62
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 12:11:32 GMT
+recorded_with: VCR 3.0.3
